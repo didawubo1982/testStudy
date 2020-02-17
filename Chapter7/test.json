@@ -1,0 +1,129 @@
+[
+  {
+    "description": "第一个moco例子",
+    "request": {
+      "uri": "/demo",
+      "method": "get"
+    },
+    "response": {
+      "text": "我的第一个moc例子"
+    }
+  },
+  {
+    "description": "带参数的moco例子",
+    "request": {
+      "uri": "/demowithpara",
+      "method": "get",
+      "queries": {
+        "name": "huhansan",
+        "age": "18"
+      }
+    },
+    "response": {
+      "text": "我的第一个带参数的moc例子"
+    }
+  },
+  {
+    "description": "不带带参数post的moco例子",
+    "request": {
+      "uri": "/postdemo",
+      "method": "post"
+    },
+    "response": {
+      "text": "我的第一个post的moc例子"
+    }
+  },
+  {
+    "description": "带参数post的moco例子",
+    "request": {
+      "uri": "/postdemowithpara",
+      "method": "post",
+      "forms": {
+        "name": "huhansan",
+        "sex": "nan"
+      }
+    },
+    "response": {
+      "text": "我的第一个带参数的post的moc例子"
+    }
+  },
+  {
+    "description": "带cookies信息的get请求",
+    "request": {
+      "uri": "/getwithcookies",
+      "method": "get",
+      "cookies": {
+        "login": "true"
+      }
+    },
+    "response": {
+      "text": "带cookies信息的get请求"
+    }
+  },
+  {
+    "description": "带cookies信息的post请求",
+    "request": {
+      "uri": "/postwithcookies",
+      "method": "post",
+      "cookies": {
+        "login": "true"
+      },
+      "json": {
+        "name": "huhansan",
+        "age": "18"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "huhansan": "chenggong",
+        "status": "1"
+      }
+    }
+  },
+  {
+    "description": "带header信息的post请求",
+    "request": {
+      "uri": "/postwithheader",
+      "method": "post",
+      "cookies": {
+        "login": "true"
+      },
+      "headers": {
+        "content-type": "application/json"
+      },
+      "json": {
+        "name": "huhansan",
+        "age": "18"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "huhansan": "success",
+        "status": "1"
+      }
+    }
+  },
+  {
+    "description": "重定向",
+    "request": {
+      "uri": "/redirect",
+      "method": "get"
+    },
+    "redirectTo": "/demo"
+  },
+  {
+    "description": "返回cookies的get请求",
+    "request": {
+      "uri": "/getcookies",
+      "method": "get"
+    },
+    "response": {
+      "text": "返回cookies",
+      "cookies": {
+        "login": "true"
+      }
+    }
+  }
+]

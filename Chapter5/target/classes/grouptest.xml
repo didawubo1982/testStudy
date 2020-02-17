@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="grouptestdemo">
+    <test name="test">
+        <groups>
+            <run>
+                <include name="stu"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.course.testng.group.groupClass1"/>
+            <class name="com.course.testng.group.groupClass2"/>
+            <class name="com.course.testng.group.groupClass3"/>
+        </classes>
+    </test>
+</suite>
